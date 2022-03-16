@@ -1,0 +1,31 @@
+<!-- 官方item -->
+<view class="items">
+    <!-- 头像 -->
+    <view class="items-tou">
+        <image src="{{objs.user.avatarUrl}}"></image>
+        <view>{{objs.user.name}}</view>
+        <!-- <view class="icon">官方</view> -->
+    </view>
+    <view class="items-nr">
+        <view class="items-title">{{objs.title}}</view>
+        <view class="text1" wx:if="{{objs.jiesi}}"><text>释义:</text>
+            <view>{{objs.jiesi}}</view>
+        </view>
+        <view class="text1"  wx:if="{{objs.laiyuan}}"><text>来源:</text>
+            <view>{{objs.laiyuan}}</view>
+        </view>
+
+        <view class="text1" wx:if="{{objs.zaoju}}"><text>造句:</text>
+            <view>{{objs.zaoju}}</view>
+        </view>
+
+        <view class="text1" wx:if="{{objs.yujing}}"><text>适用语境:</text>
+            <view>{{objs.yujing}}</view>
+        </view>
+    </view>
+    <image class="items-chang" wx:if="{{objs.status==0}}" src="/icon/chang.png" data-key="0" data-id="{{objs._id}}"
+        data-index="{{index}}" catchtap="serChang"></image>
+    <image class="items-chang" wx:if="{{objs.status==1}}" src="/icon/_chang.png" data-key="1" data-id="{{objs._id}}"
+        data-index="{{index}}" catchtap="serChang"></image>
+
+</view>

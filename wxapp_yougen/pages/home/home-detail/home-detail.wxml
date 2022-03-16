@@ -1,0 +1,90 @@
+<!--pages/home/home-detail/home-detail.wxml-->
+<view class="container">
+    <view class="item">
+        <!-- 用户信息 -->
+        <view class="user">
+            <view class="left">
+                <image src="{{objs.user.avatarUrl}}"></image>
+            </view>
+            <view class="right">
+                <view>{{objs.user.name}}</view>
+                <view>{{objs.date}}</view>
+            </view>
+            <!-- <image class="chang" wx:if="{{item.chang==1}}" src="/icon/_chang.png"></image>
+                <image class="chang" wx:else src="/icon/chang.png"></image> -->
+        </view>
+        <!-- 标题  -->
+        <view class="title">
+            <view class="bian"></view>
+            <view>{{objs.bookname}}</view>
+        </view>
+        <!-- 内容 -->
+        <view class="text">
+            {{objs.booktext}}
+        </view>
+        <!-- 功能 -->
+        <view class="gn">
+            <view class="zan">
+                <image src="/icon/xin.png" wx:if="{{objs.zan==0}}" catchtap="onZan"  data-key="0" data-index="{{index}}"></image>
+                        <image src="/icon/_xin.png" wx:if="{{objs.zan==1}}" catchtap="onZan" data-key="1"  data-index="{{index}}"></image>
+            </view>
+            <view class="pl" bindtap="pl"  data-index="0" >
+                <image src="/icon/pl.png"></image>
+            </view>
+        </view>
+    </view>
+
+    <!-- 用户点赞评论-->
+    <view class="detail-gn">
+        <van-tabs bind:click="onClick" color="#2896FC">
+            <!-- 点赞 -->
+            <van-tab title="点赞（{{zanlist.length}}）"  >
+            <block wx:for="{{zanlist}}">
+                <view class="dianzan">
+                    <image src="{{item.user.avatarUrl}}"></image>
+                    <view>{{item.user.name}}</view>
+                </view>
+            </block>
+            </van-tab>
+            <!-- 评论 -->
+            <van-tab title="评论({{pllist.length}})" >
+            <block wx:for="{{pllist}}">
+                <view class="item" style="margin-top: 0rpx;">
+                    <!-- 用户信息 -->
+                    <view class="user">
+                        <view class="left">
+                            <image src="{{item.user.avatarUrl}}"></image>
+                        </view>
+                        <view class="right">
+                            <view>{{item.user.name}}</view>
+                            <view>{{item.date}}</view>
+                            <!-- 评论 -->
+                            <view class="pl-text">{{item.pltext}}</view>
+                        </view>
+                    </view>
+
+                </view>
+            </block>
+            </van-tab>
+
+        </van-tabs>
+    </view>
+
+    <!-- 我要评论 -->
+    <view class="dianzan user-pl" style="flex-direction: row;" wx:if="{{plshow==true}}" bindtap="pl" data-index="0">
+        <image src="{{user.avatarUrl}}"></image>
+        <view style="color: rgb(156, 156, 156);">添加评论...</view>
+    </view>
+
+</view>
+
+<view class="hei" wx:if="{{plshow==false}}" catchtap="pl" data-index="1">
+    <view class="user-pl" catchtap="aa">
+        <view class="dianzan">
+            <image src="{{user.avatarUrl}}"></image>
+            <textarea class="user-text-pl" placeholder="发表评论..." model:value="{{textarea}}"></textarea>
+        </view>
+        <view class="btn" catchtap="addPl">发送</view>
+    </view>
+</view>
+<van-dialog id="van-dialog" />

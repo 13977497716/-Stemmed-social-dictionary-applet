@@ -1,0 +1,106 @@
+/* 用户 */
+page{
+    background-color: var(--back);
+}
+.item{
+    width: 100%;
+    padding: 25rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20rpx;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.user .left{
+    flex: 1;
+ 
+}
+.user .right{
+    flex: 6;
+    font-weight: bold;
+
+}
+.user .chang{
+    width: 50rpx;
+    height: 50rpx;
+
+}
+.user .left image{
+   width: 80rpx;
+   height: 80rpx;
+   display: flex;
+  
+    border-radius: 50%;
+}
+.right view:nth-child(2){
+    font-weight: 400;
+    color: rgb(160, 160, 160);
+    font-size: 25rpx;
+}
+
+.title{
+    width: 100%;
+    padding:  20rpx 0;
+    display: flex;
+    align-items: center;
+    font-size: 40rpx;
+    margin-top: 20rpx;
+}
+.bian{
+    width: 8rpx;
+    height: 50rpx;
+   background-color: var(--blue);
+    margin-right: 50rpx;
+}
+.text{
+    width: 100%;
+    line-height: 45rpx;
+    text-indent:25px;
+
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  
+}
+.gn{
+    width:100%;
+   margin-top: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+}
+.zan,.pl{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    padding: 0 20rpx;
+   border: 1rpx solid rgb(243, 243, 243);
+}
+.gn image{
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.yan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23rpx;
+    color: rgb(153, 153, 153);
+    margin-top: 15rpx;
+}
+.yan image{
+    margin-right: 10rpx;
+    width: 40rpx !important;
+}

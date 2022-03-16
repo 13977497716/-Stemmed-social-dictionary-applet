@@ -1,0 +1,87 @@
+page{
+    background-color: var(--back);
+}
+.zher{
+    width: 100%;
+    padding: 25rpx;
+    font-size: 30rpx;
+    color: var(--blue);
+    background-color: #fff;
+    font-weight: 600;  
+    box-sizing: border-box;
+    margin-top: 20rpx;
+    border-bottom: 1rpx solid var(--back);
+}
+
+.item{
+    width: 100%;
+    background-color: #fff;
+    padding: 10rpx;
+    box-sizing: border-box;
+}
+.item input{
+    width: 100%;
+    padding: 20rpx 0;
+    text-align: center;
+}
+
+
+
+.textarea{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10rpx 25rpx;
+    box-sizing: border-box;
+    width: 100%;
+}
+.textarea>view{
+    font-size: 35rpx;
+    font-weight: bold;
+}
+.shuru{
+    width: 100%;
+   padding: 20rpx 0;
+
+} 
+.btn{
+    width: 100%;
+    padding: 30rpx 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: var(--blue);
+  
+}
+
+.btnList{
+    width: 100%;
+    display: flex;
+}
+.addAdminSum,.xiazai{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 30rpx 0;
+    box-shadow: 0 5rpx 15rpx rgb(112, 112, 112);
+}
+.addAdminSum{
+    flex: 4;
+    background-color: rgb(33, 211, 9);
+}
+.xiazai{
+    flex: 1;
+    font-size: 20rpx;
+    background-color: rgb(56, 56, 56);
+    box-sizing: border-box;
+    padding: 10px;
+}
+.icon_xia{
+    vertical-align: middle;
+    width: 40rpx;
+    height: 40rpx;
+    margin: 0 10rpx;
+  
+}

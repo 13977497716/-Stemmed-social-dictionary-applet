@@ -1,0 +1,22 @@
+// 云函数入口文件
+const cloud = require('wx-server-sdk')
+
+cloud.init({
+    env: 'cloud1-3grz6s3abea04859'
+})
+const db = cloud.database()
+
+// 云函数入口函数
+exports.main = async (event, context) => {
+    const wxContext = cloud.getWXContext()
+
+  return   db.collection("pl").add({
+        data:{
+          user:event.user,
+          date:event.date,
+          pltext:event.pltext,
+          bookid:event.bookid,
+          _openid:wxContext.OPENID,
+        }
+        })
+}

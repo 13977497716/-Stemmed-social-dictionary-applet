@@ -1,0 +1,25 @@
+<van-tabs active="{{ active }}" color="#2896FC" bind:change="onChange">
+    <van-tab title="点赞">
+        <view class="item">
+           <view class="item-tou"><image src="/icon/guanfan.png"></image></view>
+           <view class="item-text">
+           <view class="item-name">李大钊大 <text>赞了你的评论</text></view>
+           <view class="item-date">2021-11-16</view>
+           </view>
+           <view class="item-wen">的卡四大皆空</view>
+        </view>
+    </van-tab>
+
+    <van-tab title="评论">
+        <view class="item">
+           <view class="item-tou"><image src="/icon/guanfan.png"></image></view>
+           <view class="item-text">
+           <view class="item-name">李大钊大 <text>对你的梗发表了评论</text></view>
+           <view class="item-pl">确实不错啊，描述得没啥毛病！</view>
+           <view class="item-date">2021-11-16</view>
+           </view>
+           <view class="item-wen">的卡四大皆空</view>
+        </view>
+    </van-tab>
+
+</van-tabs>

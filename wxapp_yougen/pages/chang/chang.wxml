@@ -1,0 +1,33 @@
+<view style="margin-top: {{height+5}}px;">
+
+    <!-- 官方item -->
+    <view class="items" wx:for="{{list}}" bindtap="admin_detail" data-id="{{item._id}}">
+
+        <!-- 头像 -->
+        <view class="items-tou">
+            <image src="{{item.user.avatarUrl}}"></image>
+            <view>{{item.user.name}}</view>
+            <!-- <view class="icon">官方</view> -->
+        </view>
+        <view class="items-nr">
+            <view class="items-title">{{item.title}}</view>
+            <view class="text1">
+                <text>释义:</text>
+                <view class="text2">{{item.jiesi}}</view>
+            </view>
+            <view class="text1"><text>来源:</text>
+                <view class="text2">{{item.laiyuan}}</view>
+            </view>
+        </view>
+
+
+        <image class="items-chang" wx:if="{{item.status==1}}" src="/icon/_chang.png" data-id="{{item._id}}"
+            data-index="{{index}}" catchtap="delChang"></image>
+
+    </view>
+
+</view>
+
+
+<van-empty description="暂无收藏的词" wx:if="{{isshow==true}}" />
+<van-dialog id="van-dialog" />

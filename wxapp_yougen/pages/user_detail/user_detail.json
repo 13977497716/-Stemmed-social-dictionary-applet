@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-notify": "@vant/weapp/notify/index"
+  },
+  "navigationBarTitleText": "更改个人信息",
+  "navigationBarTextStyle": "white"
+}

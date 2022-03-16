@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+
+    "van-popup": "@vant/weapp/popup/index"
+
+  },
+  "navigationBarTitleText": "小梗官方发布"
+}

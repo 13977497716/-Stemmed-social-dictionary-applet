@@ -1,0 +1,21 @@
+<!--pages/admin/add_admin/add_admin.wxml-->
+<view class="zher" style="text-align: center; font-size: 35rpx;">词语</view>
+<view class="item"><input type="text"  placeholder="输入你要发布的词"  model:value="{{title}}"/></view>
+<view class="zher">释义：</view>
+<view class="textarea"><textarea class="shuru" type="text" auto-height placeholder="输入词的释义"   model:value="{{jiesi}}" /></view>
+<view class="zher">来源：</view>
+<view class="textarea"><textarea class="shuru" type="text"  auto-height placeholder="输入词的来源"  model:value="{{laiyuan}}" /></view>
+<view class="zher">造句：</view>
+<view class="textarea"><textarea class="shuru" type="text"  auto-height placeholder="输入词语造句："  model:value="{{zaoju}}" /></view>
+<view class="zher">适用语境：</view>
+<view class="textarea"><textarea class="shuru" type="text"  auto-height placeholder="输入适用语境："  model:value="{{yujing}}" /></view>
+
+<view class="btn" bindtap="addAdmin">发布</view>
+
+<view class="btnList">
+    <view class="addAdminSum" bindtap="addAdminSum">批量发布</view>
+<view class="xiazai" bindtap="xiazai"><image class="icon_xia" src="/icon/xiazai.png"></image>  下载模板</view>
+</view>
+
+
+<van-dialog id="van-dialog" />

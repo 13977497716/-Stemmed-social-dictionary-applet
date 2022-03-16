@@ -1,0 +1,101 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+
+    <van-tabs bind:click="click" color="#2896FC">
+        <van-tab title="官方">
+            <!-- 官方item -->
+            <view class="items" wx:for="{{listTwo}}"  bindtap="admin_detail" data-id="{{item._id}}">
+
+                <!-- 头像 -->
+                <view class="items-tou">
+                    <image src="{{item.user.avatarUrl}}"></image>
+                    <view>{{item.user.name}}</view>
+                    <!-- <view class="icon">官方</view> -->
+                </view>
+                <view class="items-nr">
+            <view class="items-title">{{item.title}}</view>
+            <view class="text1" wx:if="{{item.jiesi}}">
+                <text>释义:</text>
+                <view class="text2">{{item.jiesi}}</view>
+            </view>
+            <view class="text1" wx:if="{{item.laiyuan}}"><text>来源:</text>
+                <view class="text2">{{item.laiyuan}}</view>
+            </view>
+
+            <view class="text1" wx:if="{{item.zaoju}}"><text>造句:</text>
+                <view class="text2">{{item.zaoju}}</view>
+            </view>
+
+            <view class="text1" wx:if="{{item.yujing}}"><text>适用语境:</text>
+                <view class="text2">{{item.yujing}}</view>
+            </view>
+
+        </view>
+                <image class="items-chang" wx:if="{{item.status==0}}" src="/icon/chang.png" data-key="0"
+                    data-id="{{item._id}}" data-index="{{index}}" catchtap="serChang"></image>
+                <image class="items-chang" wx:if="{{item.status==1}}" src="/icon/_chang.png" data-key="1"
+                    data-id="{{item._id}}" data-index="{{index}}" catchtap="serChang"></image>
+
+            </view>
+
+
+
+        </van-tab>
+
+        <van-tab title="有梗">
+
+
+            <view class="item" wx:for="{{list}}" catchtap="jake" data-id="{{item._id}}">
+                <!-- 用户信息 -->
+                <view class="user">
+                    <view class="left">
+                        <image src="{{item.user.avatarUrl}}"></image>
+                    </view>
+                    <view class="right">
+                        <view>{{item.user.name}}</view>
+                        <view>{{item.date}}</view>
+                    </view>
+                    <!-- <image class="chang" wx:if="{{item.chang==1}}" src="/icon/_chang.png"></image>
+            <image class="chang" wx:else src="/icon/chang.png"></image> -->
+                </view>
+                <!-- 标题  -->
+                <view class="title">
+                    <view class="bian"></view>
+                    <view>{{item.bookname}}</view>
+                </view>
+                <!-- 内容 -->
+                <view class="text">
+                    {{item.booktext}}
+                </view>
+                <!-- 功能 -->
+                <view class="gn">
+
+                    <view class="zan">
+                        <image src="/icon/xin.png" wx:if="{{item.zan==0}}" catchtap="onZan" data-key="0"
+                            data-item="{{item}}" data-index="{{index}}"></image>
+                        <image src="/icon/_xin.png" wx:if="{{item.zan==1}}" catchtap="onZan" data-key="1"
+                            data-item="{{item}}" data-index="{{index}}"></image>
+                    </view>
+                    <view class="pl">
+                        <image src="/icon/pl.png"></image>
+                    </view>
+                    <view class="yan">
+                        <image src="/icon/yan.png" mode="widthFix"></image>
+                        <text>{{item.num}}</text>
+                    </view>
+                </view>
+            </view>
+
+
+        </van-tab>
+    </van-tabs>
+
+
+    <!-- 收藏 -->
+
+</view>
+
+
+<van-empty description="暂无搜索记录" wx:if="{{isshow==true}}" />
+
+

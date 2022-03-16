@@ -1,0 +1,65 @@
+<!--pages/mai/mai.wxml-->
+<view class="container">
+
+    <view class="tops" style="height:{{height}}px">
+        <view>我的小梗</view>
+    </view>
+
+
+    <view class="top" wx:if="{{isLogin==true}}">
+        <image src="{{objs.avatarUrl}}"></image>
+        <view class="name"><text> {{objs.name}}</text>
+            <image wx:if="{{objs.avg==1}}" src="/icon/gay.png"></image>
+            <image wx:if="{{objs.avg==2}}" src="/icon/nv.png"></image>
+        </view>
+        <navigator  url="/pages/user_detail/user_detail" style="color: rgb(243, 243, 243); font-size: 25rpx; margin: 20rpx 0; ">去更改个人信息 ></navigator>
+     
+    </view>
+
+    <view class="top" wx:if="{{isLogin==false}}">
+        <view class="btn-login" bindtap="dl">注册/登录</view>
+        <view class="login-text">注册登录后可以更好的游玩有梗哦~</view>
+    </view>
+
+
+    <!-- 横导航栏 -->
+    <view class="nav">
+        <view class="nav1" bindtap="jake" data-index="0">
+            <image src="/icon/user1.png" />
+            <view>我的发表</view>
+        </view>
+        <view class="nav1" bindtap="jake" data-index="1">
+            <image src="/icon/user5.png" />
+            <view>收藏</view>
+        </view>
+        <view class="nav1" wx:if="{{objs.code==1}}" bindtap="jake" data-index="2">
+            <image src="/icon/guanfan.png" />
+            <view>官方功能</view>
+        </view>
+    </view>
+
+    <!-- 垂直导航 -->
+    <view style=" margin-top: 20rpx;">
+        <view class="navs" bindtap="clickNav" data-index="0">
+            <view class="nav2">
+                <image src="/icon/user2.png" /><text>与我相关</text>
+            </view>
+            <image src="/icon/xia.png" class="icon"></image>
+        </view>
+
+        <view class="navs" bindtap="clickNav" data-index="1">
+            <view class="nav2">
+                <image src="/icon/user3.png" /><text>意向加盟</text>
+            </view>
+            <image src="/icon/xia.png" class="icon"></image>
+        </view>
+
+        <view class="navs" bindtap="clickNav" data-index="2">
+            <view class="nav2">
+                <image src="/icon/user4.png" /><text>关于我们</text>
+            </view>
+            <image src="/icon/xia.png" class="icon"></image>
+        </view>
+
+    </view>
+</view>

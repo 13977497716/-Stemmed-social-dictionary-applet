@@ -1,0 +1,27 @@
+/* 垂直导航 */
+page{
+    background-color: var(--back);
+}
+.navs {
+    padding: 30rpx;
+    border-bottom: 1rpx solid var(--back);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+
+}
+
+.navs .nav2 image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+    vertical-align: middle;
+}
+
+.navs .icon {
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
+}

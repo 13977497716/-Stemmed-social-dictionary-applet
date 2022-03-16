@@ -1,0 +1,77 @@
+/* pages/fx/fx.wxss */
+page{
+    background-color: var(--back);
+}
+.top{
+    width: 100%;
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.ph{
+    height: 150rpx;
+    background-color: var(--blue);
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+}
+.ph  image{
+    width: 150rpx;
+}
+.ph text{
+    color: #fff;
+    font-weight: bold;
+    font-size: 40rpx;
+}
+.item{
+    width: 100%;
+   background-color: #fff;
+   padding: 30rpx;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-bottom: 1rpx solid var(--back);
+   box-sizing: border-box;
+}
+.item-nr{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.item-tishi{
+    color: rgb(150, 150, 150);
+    font-size: 20rpx;
+   width: 70rpx;
+   display: flex;
+   justify-content: end;
+
+}
+.item-tishi image{
+    width: 35rpx;
+    margin-right: 5rpx;
+}
+.idx{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.back{
+    background-color: rgb(133, 133, 133) !important;
+}
+.yellow{
+    background-color: rgb(240, 205, 10);
+}

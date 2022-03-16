@@ -1,0 +1,35 @@
+<!--pages/fx/fx.wxml-->
+<view class="container">
+    <view class="top" style="height: {{height+5}}px; padding-right:{{kuan}}px;">
+        <van-search value="{{ value }}" shape="round" background="#2896FC" placeholder="请输入搜索关键词"
+            use-right-icon-slot="true" bindtap="get_detail" disabled="true" closeable>
+        </van-search>
+    </view>
+
+
+
+    <!-- 排行 -->
+    <view class="ph" style="margin-top: {{height+5}}px;">
+        <image src="/icon/paihan.png" mode="widthFix"></image>
+        <text>梗排行</text>
+    </view>
+
+
+    <view style="margin-top: {{height+80}}px;">
+        <!-- 排行item -->
+        <view class="item" wx:for="{{listTwo}}" bindtap="jake" data-id="{{item._id}}">
+            <view class="item-nr">
+                <view class="idx {{index>2?'back':'yellow'}}">{{index+1}}</view>
+                <view class="text">{{item.title}}</view>
+            </view>
+
+            <view class="item-tishi">
+                <!-- <text>词语</text>  -->
+                <image src="/icon/yan.png" mode="widthFix" />{{item.num}}
+            </view>
+        </view>
+    </view>
+
+
+
+</view>

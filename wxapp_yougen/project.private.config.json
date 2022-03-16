@@ -1,0 +1,120 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/home/home-detail/home-detail",
+                    "pathName": "pages/home/home-detail/home-detail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "发现",
+                    "pathName": "pages/fx/fx",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/fx/fx-detail/fx-detail",
+                    "pathName": "pages/fx/fx-detail/fx-detail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/mai/mai",
+                    "pathName": "pages/mai/mai",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/zhuche/zhuche",
+                    "pathName": "pages/zhuche/zhuche",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/admin/admin",
+                    "pathName": "pages/admin/admin",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/admin/add_admin/add_admin",
+                    "pathName": "pages/admin/add_admin/add_admin",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/admin/upp_admin/upp_admin",
+                    "pathName": "pages/admin/upp_admin/upp_admin",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/chang/chang",
+                    "pathName": "pages/chang/chang",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/userbook/userbook",
+                    "pathName": "pages/userbook/userbook",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/fx/fx",
+                    "pathName": "pages/fx/fx",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/fx/fx-detail/fx-detail",
+                    "pathName": "pages/fx/fx-detail/fx-detail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/fx/fx-ss/fx-ss",
+                    "pathName": "pages/fx/fx-ss/fx-ss",
+                    "query": "value=%E7%89%9B%E9%80%BC",
+                    "scene": null
+                },
+                {
+                    "name": "pages/home/home-detailTwo/home-detailTwo",
+                    "pathName": "pages/home/home-detailTwo/home-detailTwo",
+                    "query": "id=fa24ce1a6179957102ba1f0913a595bb",
+                    "scene": null
+                },
+                {
+                    "name": "pages/admin/add_admin/add_admin",
+                    "pathName": "pages/admin/add_admin/add_admin",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/news/news",
+                    "pathName": "pages/news/news",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/guanyu/guanyu",
+                    "pathName": "pages/guanyu/guanyu",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

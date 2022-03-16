@@ -1,0 +1,56 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/fx/fx",
+        "pages/mai/mai",
+        "pages/home/home-detail/home-detail",
+        "pages/fx/fx-detail/fx-detail",
+        "pages/zhuche/zhuche",
+        "pages/admin/admin",
+        "pages/admin/add_admin/add_admin",
+        "pages/admin/upp_admin/upp_admin",
+        "pages/chang/chang",
+        "pages/userbook/userbook",
+        "pages/fx/fx-ss/fx-ss",
+        "pages/home/home-detailTwo/home-detailTwo",
+        "pages/login/login",
+        "pages/user_detail/user_detail",
+        "pages/news/news",
+        "pages/guanyu/guanyu"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#2896FC",
+        "navigationBarTitleText": "有梗词典",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "icon/home.png",
+                "selectedIconPath": "icon/_home.png"
+            },
+            {
+                "pagePath": "pages/fx/fx",
+                "text": "发现",
+                "iconPath": "icon/fx.png",
+                "selectedIconPath": "icon/_fx.png"
+            },
+            {
+                "pagePath": "pages/mai/mai",
+                "text": "我的",
+                "iconPath": "icon/mai.png",
+                "selectedIconPath": "icon/_mai.png"
+            }
+        ],
+        "color": "#000",
+        "selectedColor": "#2896FC"
+    },
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "van-dialog": "@vant/weapp/dialog/index",
+        "van-empty": "@vant/weapp/empty/index"
+    }
+}

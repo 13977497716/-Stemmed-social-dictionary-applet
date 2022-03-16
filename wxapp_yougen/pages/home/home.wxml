@@ -1,0 +1,118 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+
+    <view class="tab" style="height: {{height+5}}px;">
+        <view class="tabs">
+            <view bindtap="tab" data-index="0" class="{{tabshow==0?'xian':''}}">推荐</view>
+            <view bindtap="tab" data-index="1" class="{{tabshow==1?'xian':''}}">梗小圈</view>
+        </view>
+    </view>
+
+    <view style="margin-top: {{height+5}}px;">
+        <!-- 官方 -->
+        <view wx:if="{{tabshow==0}}">
+            <!-- 官方item -->
+            <view class="items" wx:for="{{listTwo}}" bindtap="admin_detail" data-id="{{item._id}}">
+
+                <!-- 头像 -->
+                <view class="items-tou">
+                    <image src="{{item.user.avatarUrl}}"></image>
+                    <view>{{item.user.name}}</view>
+                    <!-- <view class="icon">官方</view> -->
+                    <view class="yan">
+                        <image src="/icon/yan.png" mode="widthFix"></image>
+                        <text>{{item.num}}</text>
+                    </view>
+                </view>
+                <view class="items-nr">
+                    <view class="items-title">{{item.title}}</view>
+                    <view class="text1" wx:if="{{item.jiesi}}">
+                        <text>释义 ：</text>
+                        <view class="text2">{{item.jiesi}}</view>
+                    </view>
+                    <view class="text1" wx:if="{{item.laiyuan}}"><text>来源 ：</text>
+                        <view class="text2">{{item.laiyuan}}</view>
+                    </view>
+                  
+                    <view class="text1" wx:if="{{item.zaoju}}"><text>造句 ：</text>
+                        <view class="text2">{{item.zaoju}}</view>
+                    </view>
+
+                    <view class="text1"  wx:if="{{item.yujing}}"><text>适用语境 ：</text>
+                        <view class="text2">{{item.yujing}}</view>
+                    </view>
+
+                 
+                </view>
+                <image class="items-chang" wx:if="{{item.status==0}}" src="/icon/chang.png" data-key="0"
+                    data-id="{{item._id}}" data-index="{{index}}" catchtap="serChang"></image>
+                <image class="items-chang" wx:if="{{item.status==1}}" src="/icon/_chang.png" data-key="1"
+                    data-id="{{item._id}}" data-index="{{index}}" catchtap="serChang"></image>
+
+            </view>
+
+
+        </view>
+
+
+
+        <!-- item -->
+        <view wx:if="{{tabshow==1}}">
+            <view class="item" wx:for="{{list}}" catchtap="jake" data-id="{{item._id}}">
+                <!-- 用户信息 -->
+                <view class="user">
+                    <view class="left">
+                        <image src="{{item.user.avatarUrl}}"></image>
+                    </view>
+                    <view class="right">
+                        <view>{{item.user.name}}</view>
+                        <view>{{item.date}}</view>
+                    </view>
+                    <!-- <image class="chang" wx:if="{{item.chang==1}}" src="/icon/_chang.png"></image>
+                <image class="chang" wx:else src="/icon/chang.png"></image> -->
+                </view>
+                <!-- 标题  -->
+                <view class="title">
+                    <view class="bian"></view>
+                    <view>{{item.bookname}}</view>
+                </view>
+                <!-- 内容 -->
+                <view class="text">
+                    {{item.booktext}}
+                </view>
+                <!-- 功能 -->
+                <view class="gn">
+
+                    <view class="zan">
+                        <image src="/icon/xin.png" wx:if="{{item.zan==0}}" catchtap="onZan" data-key="0"
+                            data-item="{{item}}" data-index="{{index}}"></image>
+                        <image src="/icon/_xin.png" wx:if="{{item.zan==1}}" catchtap="onZan" data-key="1"
+                            data-item="{{item}}" data-index="{{index}}"></image>
+                    </view>
+                    <view class="pl">
+                        <image src="/icon/pl.png"></image>
+                    </view>
+                    <view class="yan">
+                        <image src="/icon/yan.png" mode="widthFix"></image>
+                        <text>{{item.num}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="add" bindtap="showPopup">+</view>
+        </view>
+
+
+    </view>
+
+</view>
+
+<van-popup show="{{ show }}" closeable duration="500" position="bottom" round custom-style="height: 55%;" lock-scroll
+    bind:close="onClose">
+    <view class="add-head">发表词语</view>
+    <input type="text" class="add-title" model:value="{{ci}}" placeholder="输入你要发布的词语" />
+    <textarea class="add-text" cols="30" rows="10" placeholder="解释你的词语" model:value="{{citext}}"></textarea>
+    <view class="btn" bindtap="addbtn">发送</view>
+</van-popup>
+
+
+<van-dialog id="van-dialog" />

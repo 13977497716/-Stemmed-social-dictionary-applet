@@ -1,0 +1,28 @@
+<!--pages/admin/upp_admin/upp_admin.wxml-->
+<view class="container">
+
+    <view class="nav-da">
+        <view class="nav" bindtap="isshow" data-key="0">
+            <image mode="widthFix" src="/icon/delAdmin.png"></image>删除官方词语
+        </view>
+        <view class="nav" bindtap="isshow" data-key="1">
+            <image mode="widthFix" src="/icon/delUser.png"></image>删除有梗用户词语
+        </view>
+
+    </view>
+
+    <van-popup show="{{ show }}" position="left" closeable custom-style="height: 100%; width:80%; "
+        bind:close="onClose">
+        <view class="title">{{key==0?'官方':'有梗'}}</view>
+        <view class="item" wx:for="{{list}}">
+            <view class="item-user">
+                <image src="{{item.user.avatarUrl}}"></image>
+                <text>{{item.user.name}}</text>
+            </view>
+            <view class="item-text" wx:if="{{item.title}}"><text>{{item.title}}</text> </view>
+            <view class="item-text" wx:else><text> {{item.bookname}}</text></view>
+            <view class="del" bindtap="del" data-id="{{item._id}}">删除</view>
+        </view>
+    </van-popup>
+
+</view>

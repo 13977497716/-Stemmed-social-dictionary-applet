@@ -1,0 +1,267 @@
+/* pages/home/home.wxss */
+page{
+    background-color: var(--back);
+}
+.tab{
+    width: 100%;
+background-color: var(--blue);
+display: flex;
+position: fixed;
+top: 0;
+left: 0;
+}
+.tabs{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.tabs>view{
+    margin: 0 10rpx;
+    width: 100rpx;
+    text-align: center;
+    color: #FFF;
+    font-size: 30rpx;
+    padding: 20rpx 0;
+
+}
+
+.xian{
+    border-bottom: 3rpx solid #fff;
+}
+/* 用户 */
+.item{
+    width: 100%;
+    padding: 25rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20rpx;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.user .left{
+    flex: 1;
+ 
+}
+.user .right{
+    flex: 6;
+    font-weight: bold;
+
+}
+.user .chang{
+    width: 50rpx;
+    height: 50rpx;
+
+}
+.user .left image{
+   width: 80rpx;
+   height: 80rpx;
+   display: flex;
+  
+    border-radius: 50%;
+}
+.right view:nth-child(2){
+    font-weight: 400;
+    color: rgb(160, 160, 160);
+    font-size: 25rpx;
+}
+
+.title{
+    width: 100%;
+    padding:  20rpx 0;
+    display: flex;
+    align-items: center;
+    font-size: 40rpx;
+    margin-top: 20rpx;
+}
+.bian{
+    width: 8rpx;
+    height: 50rpx;
+   background-color: var(--blue);
+    margin-right: 50rpx;
+}
+.text{
+    width: 100%;
+    line-height: 45rpx;
+    text-indent:25px;
+
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  
+}
+.gn{
+    width:100%;
+   margin-top: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+}
+.zan,.pl{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    padding: 0 20rpx;
+   border: 1rpx solid rgb(243, 243, 243);
+}
+.yan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23rpx;
+    color: rgb(153, 153, 153);
+    margin-top: 15rpx;
+}
+.yan image{
+    margin-right: 10rpx;
+    width: 40rpx !important;
+}
+.gn image{
+    width: 50rpx;
+    height: 50rpx;
+}
+
+
+/* 官方 */
+.items{
+    padding: 50rpx 20rpx 20rpx 0;
+    margin:30rpx;
+   
+    box-sizing: border-box;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0rpx 0rpx 10rpx rgb(190, 190, 190);
+    position: relative;
+}
+.items-tou{
+    flex: 2;
+    border-right: 1rpx solid var(--back);
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.items-tou .icon{
+    background-color: rgb(20, 180, 6);
+    color: #fff;
+    padding: 5rpx 20rpx;
+    border-radius: 30rpx;
+    font-size: 20rpx;
+  margin-top: 10rpx;
+}
+.items-tou image{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+.items-nr{
+    flex: 7;
+
+}
+.items .items-title{
+
+    font-size: 35rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    /* border-bottom: 1rpx solid var(--back); */
+    letter-spacing:15rpx;
+    padding-bottom: 10rpx;
+}
+.text1{
+    padding: 10rpx 0;
+    display: flex;
+    font-size: 25rpx;
+    color: rgb(136, 136, 136);
+
+}
+.text1>text{
+    /* width: 80rpx; */
+    margin-right: 20rpx;
+ }
+.text1>view{
+    flex: 1;
+    width: 0; 
+}
+.text2{
+    text-overflow: ellipsis;
+overflow-x: hidden;
+white-space: nowrap;
+}
+/* 收藏 */
+.items-chang{
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    right: 13rpx;
+    top: 6rpx;
+}
+.add{
+    position: fixed;
+    bottom: 20rpx;
+    right: 30rpx;
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    box-shadow: 5rpx 5rpx 10rpx rgb(138, 138, 138);
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60rpx;
+    color: #fff;
+}
+.van-popup{
+    padding: 20rpx !important;
+}
+
+/* 发布 */
+.add-head{
+    width: 100%;
+    padding: 20rpx 0;
+    text-align: center;
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.add-title{
+    width: 60%;
+    height: 90rpx;
+    border-bottom: 1rpx solid rgb(196, 196, 196);
+    margin: 0 auto;
+    text-align: center;
+}
+.add-text{
+    width: 100%;
+    height: 400rpx;
+    background-color: var(--back);
+    margin-top: 20rpx;
+    padding: 20rpx;
+}
+
+.btn{
+    width: 100%;
+    height: 90rpx;
+    border-radius: 45rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 0 auto;
+    background-color: var(--blue);
+    margin-top: 20rpx;
+}

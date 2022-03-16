@@ -1,0 +1,41 @@
+/* pages/login/login.wxss */
+.tou{
+    width: 100%;
+    position: relative;
+}
+.tou image{
+    width: 100%;
+      height: 400rpx;
+}
+.anniu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   align-items: center;
+   margin-top: 90rpx;
+}
+.h1{
+    font-size: 35rpx;
+    padding: 40rpx 0;
+    font-weight: 600;
+}
+
+.zhuce-text{
+    font-size: 25rpx;
+   color: rgb(173, 173, 173);
+   padding: 20rpx 0;
+  
+}
+.btn{
+    background-image: linear-gradient(to right, #207BFD , #2C36FF);
+    width: 60%;
+    height: 90rpx;
+    border-radius:45rpx;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0rpx 10rpx 10rpx rgba(17, 122, 241, 0.315);
+    margin: 40rpx 0;
+}

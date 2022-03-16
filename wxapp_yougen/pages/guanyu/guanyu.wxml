@@ -1,0 +1,15 @@
+<!--pages/guanyu/guanyu.wxml-->
+<view class="container">
+    <view class="conte">
+        <view class="h1">有梗的介绍</view>
+        <view class="text">有梗小程序的目的是让大家了解或查询一些词，在你莫名奇妙不知道某些梗或者词语的时候，你便能进行搜索快速了解，还可以对其进行收藏，并且能了解到其他网友发布的新颖词语，
+            以及有趣的评论。这是百度以及普通搜索词典不能带来的特点。
+        </view>
+        <view class="bottom">『 有梗官方 』</view>
+        <view class="xiala">
+        <view>下拉关闭</view>
+            <image src="/icon/setup.png" class="icon" mode="widthFix"></image>
+        </view>
+    </view>
+
+</view>

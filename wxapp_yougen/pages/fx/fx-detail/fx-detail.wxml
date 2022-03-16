@@ -1,0 +1,20 @@
+<!--pages/fx/fx-detail/fx-detail.wxml-->
+<view class="container">
+
+    <van-search value="{{ value }}" shape="round" background="#2896FC" placeholder="请输入搜索关键词" use-right-icon-slot="true"
+        closeable bind:search="selectList">
+    </van-search>
+
+    <!-- 记录标题 -->
+    <view class="jilu-title"> <text>搜索记录</text> <text style="color: rgb(12, 151, 243);" bindtap="delssList" wx:if="{{isshow==false}}">清除</text></view>
+    <!-- 记录 -->
+    <view>
+        <view class="jilu-item" wx:for="{{list}}" bindtap="jake" data-value="{{item}}">
+            <image src="/icon/time.png" mode="widthFix"></image>
+            <text>{{item}}</text>
+        </view>
+    </view>
+
+</view>
+
+<van-empty description="暂无搜索记录" wx:if="{{isshow==true}}" />

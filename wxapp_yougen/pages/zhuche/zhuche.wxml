@@ -1,0 +1,33 @@
+<!--pages/zhuche/zhuche.wxml-->
+<view class="container">
+
+
+
+    <!-- 注册 -->
+    <view class="zc-div" >
+
+        <input type="text" class="input" placeholder="昵称" model:value="{{name}}"/>
+        
+        <input type="text" class="input" placeholder="绑定手机号码" name="phone" maxlength="11"  model:value="{{phone}}"/>
+
+        <view class="xuanz">
+            <radio-group bindchange="radioSelect"   class="radio-group">
+                <view class="radio">
+                    <radio class="" color="#2896FC" value="1"  checked="true"/>男
+                </view>
+
+                <view class="radio">
+                    <radio class=""  color="#2896FC" value="2" />女
+                </view>
+
+            </radio-group>
+        </view>
+        <view  class="btn" bindtap="adduser">注册</view>
+
+    
+    </view>
+
+  <!-- </form> -->
+</view>
+
+<van-toast id="van-toast" />

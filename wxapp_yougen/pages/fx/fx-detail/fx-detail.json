@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index"
+  },
+  "navigationBarTitleText": "梗小圈",
+  "navigationBarTextStyle": "white"
+}

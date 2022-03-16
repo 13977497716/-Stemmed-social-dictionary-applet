@@ -1,0 +1,55 @@
+/* pages/zhuche/zhuche.wxss */
+page{
+
+}
+.zc-div{
+    margin-top: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+   padding: 0 40rpx;
+   box-sizing: border-box;
+}
+
+.input{
+ width: 70%;
+display: flex;
+align-items: center;
+padding: 25rpx  40rpx;
+margin: 25rpx 0;
+border-radius: 60rpx;
+background-color: #F4F6F8;
+
+}
+
+.xuanz{
+   width: 70%;
+   display: flex;
+  flex-direction: row;
+  margin: 20rpx 0;
+}
+.radio-group{
+   display: flex;
+   align-items: center;
+   width: 100%;
+
+}
+.radio{
+ flex: 1;
+
+}
+
+.btn{
+    background-image: linear-gradient(to right, #207BFD , #2C36FF);
+   color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0rpx 10rpx 10rpx rgba(17, 122, 241, 0.315); 
+   margin-top: 70rpx;
+   width: 80% !important;
+   height: 100rpx;
+   border-radius: 50rpx;
+}

@@ -1,0 +1,44 @@
+<!--pages/userbook/userbook.wxml-->
+<view class="item" wx:for="{{list}}" catchtap="jake" data-id="{{item._id}}" >
+    <!-- 用户信息 -->
+    <view class="user">
+        <view class="left">
+            <image src="{{item.user.avatarUrl}}"></image>
+        </view>
+        <view class="right">
+            <view>{{item.user.name}}</view>
+            <view>{{item.date}}</view>
+        </view>
+        <!-- <image class="chang" wx:if="{{item.chang==1}}" src="/icon/_chang.png"></image>
+                <image class="chang" wx:else src="/icon/chang.png"></image> -->
+    </view>
+    <!-- 标题  -->
+    <view class="title">
+        <view class="bian"></view>
+        <view>{{item.bookname}}</view>
+    </view>
+    <!-- 内容 -->
+    <view class="text">
+        {{item.booktext}}
+    </view>
+    <!-- 功能 -->
+    <view class="gn">
+        <view class="zan">
+
+            <image src="/icon/xin.png" wx:if="{{item.zan==0}}" catchtap="onZan" data-key="0" data-item="{{item}}"
+                data-index="{{index}}"></image>
+            <image src="/icon/_xin.png" wx:if="{{item.zan==1}}" catchtap="onZan" data-key="1" data-item="{{item}}"
+                data-index="{{index}}"></image>
+            <!-- <text wx:if="{{item.num>0}}">{{item.num}}</text> -->
+        </view>
+        <view class="pl">
+            <image src="/icon/pl.png"></image>
+        </view>
+        <view class="yan">
+            <image src="/icon/yan.png" mode="widthFix"></image>
+            <text>{{item.num}}</text>
+        </view>
+    </view>
+</view>
+
+<van-empty description="你还未发表任何梗哦~" wx:if="{{isshow==true}}" />

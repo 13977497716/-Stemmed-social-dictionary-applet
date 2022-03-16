@@ -1,0 +1,12 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+<view class="tou"><image src="/icon/login.png" mode="widthFix"></image></view>
+</view>
+
+<view class="anniu">
+    <view class="h1">有梗词典</view>
+    <view class="btn" bindtap="denglu" >微信一键登录/注册</view>
+<!-- <view class="zhuce-text" bindtap="register">没有权限？去注册</view> -->
+</view>
+
+<van-toast id="van-toast" />

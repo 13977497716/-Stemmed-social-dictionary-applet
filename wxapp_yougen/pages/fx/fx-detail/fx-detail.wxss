@@ -1,0 +1,25 @@
+/* pages/fx/fx-detail/fx-detail.wxss */
+page{
+    background-color: var(--back);
+}
+.jilu-title{
+    width: 100%;
+    padding: 20rpx 30rpx;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1rpx solid var(--back);
+    color: rgb(124, 124, 124);
+}
+.jilu-item{
+    width: 100%;
+    padding: 30rpx 30rpx;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+.jilu-item image{
+    width: 50rpx;
+    margin-right: 20rpx;
+}

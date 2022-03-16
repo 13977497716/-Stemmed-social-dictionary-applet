@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+
+    "van-popup": "@vant/weapp/popup/index"
+  },
+  "navigationStyle": "custom"
+
+}
